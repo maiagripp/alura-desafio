@@ -6,8 +6,6 @@ O desafio era criar um carrossel usando apenas HTML, CSS e JavaScript puro e seg
 
 [Protótipo](https://www.figma.com/file/ulBnqmFORk0Z4ORkhnl7IV/%5BTESTE%5D-Listagem-Cursos?node-id=1%3A2)
 
-Desafio realizado por: Claudia Maia
-
 ## Stack utilizada
 
 HTML, CSS e JavaScript puro
