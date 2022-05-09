@@ -63,6 +63,7 @@ main {
   column-gap: 20px;
   position: absolute;
   left: 0;
+  transition: left 0.3s ease-in-out;
 }
 
 .card__item {
@@ -80,11 +81,12 @@ main {
 
 .cards .carousel__item--hidden {
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.1s, opacity 0.1s linear;
 }
 
 .cards .carousel__item--visible {
   visibility: visible;
-  /* animation: myAnim 5s ease 0s 1 normal forwards; */
 }
 
 .card__item p {
@@ -118,14 +120,4 @@ img {
 
 .card__footer > p {
   color: #bec8d8;
-}
-
-@keyframes myAnim {
-  0% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
