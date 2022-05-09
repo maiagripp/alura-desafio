@@ -12,6 +12,7 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #e5e5e5;
   padding: 3rem;
+  overflow-x: hidden;
 }
 
 main {
@@ -20,17 +21,23 @@ main {
   align-items: flex-start;
   flex-direction: column;
   margin-left: 120px;
-  overflow: hidden;
+  width: 100vw;
 }
 
-.top-container {
+.top {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 80vw;
   align-items: baseline;
 }
 
-.top-container button {
+.top__title {
+  font-size: 3.2rem;
+  color: #093366;
+  margin-top: 97px;
+}
+
+.top button {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 100%;
@@ -41,17 +48,24 @@ main {
   text-align: center;
 }
 
-.container-cards {
+.top__button {
+  transform: translateY(-50%);
+}
+
+.cards {
   margin-top: 30px;
+  display: flex;
+  position: relative;
 }
 
-.title {
-  font-size: 3.2rem;
-  color: #093366;
-  margin-top: 97px;
+#cards__container {
+  display: flex;
+  column-gap: 20px;
+  position: absolute;
+  left: 0;
 }
 
-.card {
+.card__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -64,26 +78,35 @@ main {
   box-shadow: 4px 4px 20px 0px rgba(120, 135, 182, 0.1);
 }
 
-.card p {
+.cards .carousel__item--hidden {
+  visibility: hidden;
+}
+
+.cards .carousel__item--visible {
+  visibility: visible;
+  /* animation: myAnim 5s ease 0s 1 normal forwards; */
+}
+
+.card__item p {
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.card > p,
+.card__item > p,
 img {
   margin-left: 1.5rem;
 }
 
-.card > img {
+.card__item > img {
   margin-top: 2rem;
 }
 
-.card > p {
+.card__item > p {
   color: #093366;
   margin: 2rem 0 2rem 1rem;
 }
 
-.card-footer {
+.card__footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -93,6 +116,16 @@ img {
   height: 100%;
 }
 
-.card-footer > p {
+.card__footer > p {
   color: #bec8d8;
+}
+
+@keyframes myAnim {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
